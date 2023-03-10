@@ -2,21 +2,15 @@
 <hr />
 <div class="row">
   <div class="col">
-    <h3>Personajes</h3>
-    <hr>
-    <ul>
-        <li>Krillin - 700</li>
-        <li>Yamcha - 450</li>
-        <li>Chaos - 120</li>
-    </ul>
+    <app-personajes [personajes]="personajes"></app-personajes>
   </div>
 
   <div class="col">
-    <h3>Agregar</h3>
+    <h3>Agregar - {{nuevo.nombre}}</h3>
     <hr>
     <form (ngSubmit)="agregar()">
-        <input type="text" placeholder="Personaje">
-        <input type="text" placeholder="Puntos de poder">
+        <input name="nombre" [(ngModel)]="nuevo.nombre" type="text" placeholder="Personaje">
+        <input name="poder" [(ngModel)]="nuevo.poder" type="number" placeholder="Puntos de poder">
         <button type="submit">Agregar</button>
     </form>
   </div>
