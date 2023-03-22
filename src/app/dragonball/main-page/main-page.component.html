@@ -2,16 +2,11 @@
 <hr />
 <div class="row">
   <div class="col">
-    <app-personajes [personajes]="personajes"></app-personajes>
+    <app-personajes></app-personajes>
   </div>
 
   <div class="col">
-    <h3>Agregar - {{nuevo.nombre}}</h3>
-    <hr>
-    <form (ngSubmit)="agregar()">
-        <input name="nombre" [(ngModel)]="nuevo.nombre" type="text" placeholder="Personaje">
-        <input name="poder" [(ngModel)]="nuevo.poder" type="number" placeholder="Puntos de poder">
-        <button type="submit">Agregar</button>
-    </form>
+    <!-- $event viene el argumento tipo Personaje -->
+    <app-agregar></app-agregar>
   </div>
 </div>
