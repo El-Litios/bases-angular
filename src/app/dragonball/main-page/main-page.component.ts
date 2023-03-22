@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Personaje } from '../interfaces/dragonball.interface';
-
+import { DragonballService } from '../services/dragonball.service';
 
 @Component({
   selector: 'app-main-page',
@@ -8,27 +8,8 @@ import { Personaje } from '../interfaces/dragonball.interface';
   styleUrls: ['./main-page.component.css'],
 })
 export class MainPageComponent {
+  
 
-  personajes: Personaje[] = [
-    {
-      nombre: 'Cell',
-      poder: 200000
-    }
-  ];
-
-  nuevo: Personaje = {
-    nombre: '',
-    poder: 0,
-  };
-  agregar() {
-    if (this.nuevo.nombre.trim().length === 0) {
-      return;
-    }else{
-      this.personajes.push(this.nuevo);
-      this.nuevo = {
-        nombre: '',
-        poder: 0
-      }
-    }
-  }
+  //inyeccion de dependencia
+  constructor() {}
 }
